@@ -5,16 +5,18 @@ services:
     image: postgres
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
+      TZ: Asia/Taipei
     volumes:
       - "/cms_docker_postgresql_data:/var/lib/postgresql/data"
 
-  cms_test:
+  cms:
     container_name: cms
     build: .
     depends_on:
       - "db"
     environment:
       CMS_CONFIG: /usr/local/etc/cms-testdb.conf
+      TZ: Asia/Taipei
     volumes:
       - "./codecov:/home/cmsuser/cms/codecov"
     ports:

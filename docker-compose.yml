@@ -5,18 +5,21 @@ services:
     image: postgres
     environment:
       POSTGRES_HOST_AUTH_METHOD: trust
+      TZ: Asia/Taipei
     volumes:
       - "/cms_docker_postgresql_data:/var/lib/postgresql/data"
 
-  cms_test:
+  cms:
     container_name: cms
     build: .
     depends_on:
       - "db"
     environment:
       CMS_CONFIG: /usr/local/etc/cms-testdb.conf
+      TZ: Asia/Taipei
     volumes:
       - "./codecov:/home/cmsuser/cms/codecov"
+      - "./CreateByAaW:/home/cmsuser/cms/CreateByAaW"
     ports:
       - 8888:8888
       - 8889:8889
@@ -35,5 +38,5 @@ services:
       cmsImportUser --all -L italy_yaml Sample_Contest;
       cmsImportContest -i -L italy_yaml Sample_Contest;
       cmsRankingWebServer &
-      cmsResourceService -a 1;
+      cmsResourceService -a 2;
       '
