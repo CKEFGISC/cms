@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: cms
+Version: 1.5.dev0
+Summary: A contest management system and grader for IOI-like programming competitions
+Home-page: https://github.com/cms-dev/cms
+Author: The CMS development team
+Author-email: contestms@googlegroups.com
+License: Affero General Public License v3
+Download-URL: https://github.com/cms-dev/cms/archive/master.tar.gz
+Description: UNKNOWN
+Keywords: ioi programming contest grader management system
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Natural Language :: English
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3

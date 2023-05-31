@@ -38,5 +38,5 @@ services:
       cmsImportUser --all -L italy_yaml Sample_Contest;
       cmsImportContest -i -L italy_yaml Sample_Contest;
       cmsRankingWebServer &
-      cmsResourceService -a 2;
+      cmsResourceService -a 3;
       '

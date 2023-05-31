@@ -1,0 +1,54 @@
+[cms.grading.languages]
+C# / Mono = cms.grading.languages.csharp_mono:CSharpMono
+C++11 / g++ = cms.grading.languages.cpp11_gpp:Cpp11Gpp
+C++14 / g++ = cms.grading.languages.cpp14_gpp:Cpp14Gpp
+C++17 / g++ = cms.grading.languages.cpp17_gpp:Cpp17Gpp
+C11 / gcc = cms.grading.languages.c11_gcc:C11Gcc
+Haskell / ghc = cms.grading.languages.haskell_ghc:HaskellGhc
+Java / JDK = cms.grading.languages.java_jdk:JavaJDK
+PHP = cms.grading.languages.php:Php
+Pascal / fpc = cms.grading.languages.pascal_fpc:PascalFpc
+Python 2 / CPython = cms.grading.languages.python2_cpython:Python2CPython
+Python 3 / CPython = cms.grading.languages.python3_cpython:Python3CPython
+Rust = cms.grading.languages.rust:Rust
+
+[cms.grading.scoretypes]
+GroupMin = cms.grading.scoretypes.GroupMin:GroupMin
+GroupMul = cms.grading.scoretypes.GroupMul:GroupMul
+GroupThreshold = cms.grading.scoretypes.GroupThreshold:GroupThreshold
+Sum = cms.grading.scoretypes.Sum:Sum
+
+[cms.grading.tasktypes]
+Batch = cms.grading.tasktypes.Batch:Batch
+Communication = cms.grading.tasktypes.Communication:Communication
+OutputOnly = cms.grading.tasktypes.OutputOnly:OutputOnly
+TwoSteps = cms.grading.tasktypes.TwoSteps:TwoSteps
+
+[console_scripts]
+cmsAddAdmin = cmscontrib.AddAdmin:main
+cmsAddParticipation = cmscontrib.AddParticipation:main
+cmsAddStatement = cmscontrib.AddStatement:main
+cmsAddSubmission = cmscontrib.AddSubmission:main
+cmsAddTeam = cmscontrib.AddTeam:main
+cmsAddTestcases = cmscontrib.AddTestcases:main
+cmsAddUser = cmscontrib.AddUser:main
+cmsCleanFiles = cmscontrib.CleanFiles:main
+cmsDumpExporter = cmscontrib.DumpExporter:main
+cmsDumpImporter = cmscontrib.DumpImporter:main
+cmsDumpUpdater = cmscontrib.DumpUpdater:main
+cmsExportSubmissions = cmscontrib.ExportSubmissions:main
+cmsImportContest = cmscontrib.ImportContest:main
+cmsImportDataset = cmscontrib.ImportDataset:main
+cmsImportTask = cmscontrib.ImportTask:main
+cmsImportTeam = cmscontrib.ImportTeam:main
+cmsImportUser = cmscontrib.ImportUser:main
+cmsMake = cmstaskenv.cmsMake:main
+cmsRWSHelper = cmscontrib.RWSHelper:main
+cmsRemoveContest = cmscontrib.RemoveContest:main
+cmsRemoveParticipation = cmscontrib.RemoveParticipation:main
+cmsRemoveSubmissions = cmscontrib.RemoveSubmissions:main
+cmsRemoveTask = cmscontrib.RemoveTask:main
+cmsRemoveUser = cmscontrib.RemoveUser:main
+cmsRunTests = cmstestsuite.RunTests:main
+cmsSpoolExporter = cmscontrib.SpoolExporter:main
+
