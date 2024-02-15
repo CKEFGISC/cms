@@ -1,0 +1,2420 @@
+.
+├── babel_mapping.cfg
+├── build
+│   ├── bdist.linux-x86_64
+│   ├── lib
+│   │   ├── cms
+│   │   │   ├── conf.py
+│   │   │   ├── db
+│   │   │   │   ├── admin.py
+│   │   │   │   ├── base.py
+│   │   │   │   ├── contest.py
+│   │   │   │   ├── drop.py
+│   │   │   │   ├── filecacher.py
+│   │   │   │   ├── fsobject.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── init.py
+│   │   │   │   ├── printjob.py
+│   │   │   │   ├── session.py
+│   │   │   │   ├── submission.py
+│   │   │   │   ├── task.py
+│   │   │   │   ├── types.py
+│   │   │   │   ├── user.py
+│   │   │   │   ├── usertest.py
+│   │   │   │   └── util.py
+│   │   │   ├── grading
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── Job.py
+│   │   │   │   ├── languagemanager.py
+│   │   │   │   ├── language.py
+│   │   │   │   ├── languages
+│   │   │   │   │   ├── c11_gcc.py
+│   │   │   │   │   ├── cpp11_gpp.py
+│   │   │   │   │   ├── cpp14_gpp.py
+│   │   │   │   │   ├── cpp17_gpp.py
+│   │   │   │   │   ├── csharp_mono.py
+│   │   │   │   │   ├── haskell_ghc.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── java_jdk.py
+│   │   │   │   │   ├── pascal_fpc.py
+│   │   │   │   │   ├── php.py
+│   │   │   │   │   ├── python2_cpython.py
+│   │   │   │   │   ├── python3_cpython.py
+│   │   │   │   │   └── rust.py
+│   │   │   │   ├── ParameterTypes.py
+│   │   │   │   ├── Sandbox.py
+│   │   │   │   ├── scoretypes
+│   │   │   │   │   ├── abc.py
+│   │   │   │   │   ├── GroupMin.py
+│   │   │   │   │   ├── GroupMul.py
+│   │   │   │   │   ├── GroupThreshold.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   └── Sum.py
+│   │   │   │   ├── scoring.py
+│   │   │   │   ├── steps
+│   │   │   │   │   ├── compilation.py
+│   │   │   │   │   ├── evaluation.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── messages.py
+│   │   │   │   │   ├── stats.py
+│   │   │   │   │   ├── trusted.py
+│   │   │   │   │   ├── utils.py
+│   │   │   │   │   └── whitediff.py
+│   │   │   │   └── tasktypes
+│   │   │   │       ├── abc.py
+│   │   │   │       ├── Batch.py
+│   │   │   │       ├── Communication.py
+│   │   │   │       ├── __init__.py
+│   │   │   │       ├── OutputOnly.py
+│   │   │   │       ├── TwoSteps.py
+│   │   │   │       └── util.py
+│   │   │   ├── __init__.py
+│   │   │   ├── io
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── priorityqueue.py
+│   │   │   │   ├── PsycoGevent.py
+│   │   │   │   ├── rpc.py
+│   │   │   │   ├── service.py
+│   │   │   │   ├── triggeredservice.py
+│   │   │   │   ├── web_rpc.py
+│   │   │   │   └── web_service.py
+│   │   │   ├── locale
+│   │   │   │   ├── bg
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── bs
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── cs
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── de
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── es
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── et
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── fr
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── it
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── ja
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── ko
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── locale.py
+│   │   │   │   ├── lt
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── lv
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── nl
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── ro
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── ru
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── sl
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── uk
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── vi
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   ├── zh_CN
+│   │   │   │   │   └── LC_MESSAGES
+│   │   │   │   │       ├── cms.mo
+│   │   │   │   │       └── cms.po
+│   │   │   │   └── zh_TW
+│   │   │   │       └── LC_MESSAGES
+│   │   │   │           ├── cms.mo
+│   │   │   │           └── cms.po
+│   │   │   ├── log.py
+│   │   │   ├── plugin.py
+│   │   │   ├── server
+│   │   │   │   ├── admin
+│   │   │   │   │   ├── authentication.py
+│   │   │   │   │   ├── formatting.py
+│   │   │   │   │   ├── handlers
+│   │   │   │   │   │   ├── admin.py
+│   │   │   │   │   │   ├── base.py
+│   │   │   │   │   │   ├── contestannouncement.py
+│   │   │   │   │   │   ├── contest.py
+│   │   │   │   │   │   ├── contestquestion.py
+│   │   │   │   │   │   ├── contestranking.py
+│   │   │   │   │   │   ├── contestsubmission.py
+│   │   │   │   │   │   ├── contesttask.py
+│   │   │   │   │   │   ├── contestuser.py
+│   │   │   │   │   │   ├── dataset.py
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   ├── main.py
+│   │   │   │   │   │   ├── submission.py
+│   │   │   │   │   │   ├── task.py
+│   │   │   │   │   │   ├── user.py
+│   │   │   │   │   │   └── usertest.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── jinja2_toolbox.py
+│   │   │   │   │   ├── rpc_authorization.py
+│   │   │   │   │   ├── server.py
+│   │   │   │   │   ├── static
+│   │   │   │   │   │   ├── aws_style.css
+│   │   │   │   │   │   ├── aws_utils.js
+│   │   │   │   │   │   ├── jq
+│   │   │   │   │   │   │   ├── jqplot.dateAxisRenderer.min.js
+│   │   │   │   │   │   │   ├── jqplot.enhancedLegendRenderer.min.js
+│   │   │   │   │   │   │   ├── jquery.jqplot.min.css
+│   │   │   │   │   │   │   └── jquery.jqplot.min.js
+│   │   │   │   │   │   ├── reset.css
+│   │   │   │   │   │   ├── sh
+│   │   │   │   │   │   │   ├── shBrushCpp.js
+│   │   │   │   │   │   │   ├── shBrushDelphi.js
+│   │   │   │   │   │   │   ├── shCore.css
+│   │   │   │   │   │   │   ├── shCore.js
+│   │   │   │   │   │   │   └── shThemeDefault.css
+│   │   │   │   │   │   └── web_rpc.js
+│   │   │   │   │   └── templates
+│   │   │   │   │       ├── activate_dataset.html
+│   │   │   │   │       ├── add_admin.html
+│   │   │   │   │       ├── add_attachment.html
+│   │   │   │   │       ├── add_contest.html
+│   │   │   │   │       ├── add_dataset.html
+│   │   │   │   │       ├── add_manager.html
+│   │   │   │   │       ├── add_statement.html
+│   │   │   │   │       ├── add_task.html
+│   │   │   │   │       ├── add_team.html
+│   │   │   │   │       ├── add_testcase.html
+│   │   │   │   │       ├── add_testcases.html
+│   │   │   │   │       ├── add_user.html
+│   │   │   │   │       ├── admin.html
+│   │   │   │   │       ├── admins.html
+│   │   │   │   │       ├── announcements.html
+│   │   │   │   │       ├── base.html
+│   │   │   │   │       ├── contest.html
+│   │   │   │   │       ├── contest_remove.html
+│   │   │   │   │       ├── contests.html
+│   │   │   │   │       ├── contest_submissions.html
+│   │   │   │   │       ├── contest_tasks.html
+│   │   │   │   │       ├── contest_users.html
+│   │   │   │   │       ├── contest_user_tests.html
+│   │   │   │   │       ├── dataset.html
+│   │   │   │   │       ├── delete_dataset.html
+│   │   │   │   │       ├── download_testcases.html
+│   │   │   │   │       ├── error.html
+│   │   │   │   │       ├── fragments
+│   │   │   │   │       │   ├── admin_form.html
+│   │   │   │   │       │   ├── dataset_selector.html
+│   │   │   │   │       │   ├── hashed_password_form.html
+│   │   │   │   │       │   ├── overload_warning.html
+│   │   │   │   │       │   ├── user_test_row.html
+│   │   │   │   │       │   └── user_test_rows.html
+│   │   │   │   │       ├── login.html
+│   │   │   │   │       ├── macro
+│   │   │   │   │       │   ├── pages.html
+│   │   │   │   │       │   ├── reevaluation_buttons.html
+│   │   │   │   │       │   └── submission.html
+│   │   │   │   │       ├── overview.html
+│   │   │   │   │       ├── participation.html
+│   │   │   │   │       ├── participation_remove.html
+│   │   │   │   │       ├── questions.html
+│   │   │   │   │       ├── ranking.html
+│   │   │   │   │       ├── ranking.txt
+│   │   │   │   │       ├── rename_dataset.html
+│   │   │   │   │       ├── resources.html
+│   │   │   │   │       ├── resourceslist.html
+│   │   │   │   │       ├── submission.html
+│   │   │   │   │       ├── task.html
+│   │   │   │   │       ├── task_remove.html
+│   │   │   │   │       ├── tasks.html
+│   │   │   │   │       ├── team.html
+│   │   │   │   │       ├── teams.html
+│   │   │   │   │       ├── user.html
+│   │   │   │   │       ├── user_remove.html
+│   │   │   │   │       ├── users.html
+│   │   │   │   │       └── user_test.html
+│   │   │   │   ├── contest
+│   │   │   │   │   ├── authentication.py
+│   │   │   │   │   ├── communication.py
+│   │   │   │   │   ├── formatting.py
+│   │   │   │   │   ├── handlers
+│   │   │   │   │   │   ├── base.py
+│   │   │   │   │   │   ├── communication.py
+│   │   │   │   │   │   ├── contest.py
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   ├── main.py
+│   │   │   │   │   │   ├── task.py
+│   │   │   │   │   │   ├── tasksubmission.py
+│   │   │   │   │   │   └── taskusertest.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── jinja2_toolbox.py
+│   │   │   │   │   ├── phase_management.py
+│   │   │   │   │   ├── printing.py
+│   │   │   │   │   ├── server.py
+│   │   │   │   │   ├── static
+│   │   │   │   │   │   ├── css
+│   │   │   │   │   │   │   └── bootstrap.css
+│   │   │   │   │   │   ├── cws_style.css
+│   │   │   │   │   │   ├── cws_utils.js
+│   │   │   │   │   │   ├── img
+│   │   │   │   │   │   │   ├── glyphicons-halflings.png
+│   │   │   │   │   │   │   ├── glyphicons-halflings-white.png
+│   │   │   │   │   │   │   └── mimetypes
+│   │   │   │   │   │   │       ├── application-x-executable.png
+│   │   │   │   │   │   │       ├── audio-x-generic.png
+│   │   │   │   │   │   │       ├── font-x-generic.png
+│   │   │   │   │   │   │       ├── image-x-generic.png
+│   │   │   │   │   │   │       ├── package-x-generic.png
+│   │   │   │   │   │   │       ├── text-html.png
+│   │   │   │   │   │   │       ├── text-x-generic.png
+│   │   │   │   │   │   │       ├── text-x-generic-template.png
+│   │   │   │   │   │   │       ├── text-x-script.png
+│   │   │   │   │   │   │       ├── unknown.png
+│   │   │   │   │   │   │       ├── video-x-generic.png
+│   │   │   │   │   │   │       ├── x-office-address-book.png
+│   │   │   │   │   │   │       ├── x-office-calendar.png
+│   │   │   │   │   │   │       ├── x-office-document.png
+│   │   │   │   │   │   │       ├── x-office-presentation.png
+│   │   │   │   │   │   │       └── x-office-spreadsheet.png
+│   │   │   │   │   │   └── js
+│   │   │   │   │   │       └── bootstrap.js
+│   │   │   │   │   ├── submission
+│   │   │   │   │   │   ├── check.py
+│   │   │   │   │   │   ├── file_matching.py
+│   │   │   │   │   │   ├── file_retrieval.py
+│   │   │   │   │   │   ├── __init__.py
+│   │   │   │   │   │   ├── utils.py
+│   │   │   │   │   │   └── workflow.py
+│   │   │   │   │   ├── templates
+│   │   │   │   │   │   ├── base.html
+│   │   │   │   │   │   ├── communication.html
+│   │   │   │   │   │   ├── contest.html
+│   │   │   │   │   │   ├── contest_list.html
+│   │   │   │   │   │   ├── documentation.html
+│   │   │   │   │   │   ├── error.html
+│   │   │   │   │   │   ├── macro
+│   │   │   │   │   │   │   └── submission.html
+│   │   │   │   │   │   ├── overview.html
+│   │   │   │   │   │   ├── printing.html
+│   │   │   │   │   │   ├── register.html
+│   │   │   │   │   │   ├── submission_details.html
+│   │   │   │   │   │   ├── task_description.html
+│   │   │   │   │   │   ├── task_submissions.html
+│   │   │   │   │   │   ├── test_interface.html
+│   │   │   │   │   │   ├── user_test_details.html
+│   │   │   │   │   │   └── user_test_row.html
+│   │   │   │   │   └── tokening.py
+│   │   │   │   ├── file_middleware.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── jinja2_toolbox.py
+│   │   │   │   ├── static
+│   │   │   │   │   ├── favicon.ico
+│   │   │   │   │   ├── jq
+│   │   │   │   │   │   ├── jquery-3.6.0.min.js
+│   │   │   │   │   │   └── jquery-migrate-3.3.2.min.js
+│   │   │   │   │   └── loading.gif
+│   │   │   │   └── util.py
+│   │   │   ├── service
+│   │   │   │   ├── Checker.py
+│   │   │   │   ├── esoperations.py
+│   │   │   │   ├── EvaluationService.py
+│   │   │   │   ├── flushingdict.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── LogService.py
+│   │   │   │   ├── PrintingService.py
+│   │   │   │   ├── ProxyService.py
+│   │   │   │   ├── ResourceService.py
+│   │   │   │   ├── scoringoperations.py
+│   │   │   │   ├── ScoringService.py
+│   │   │   │   ├── templates
+│   │   │   │   │   └── printing
+│   │   │   │   │       └── title_page.tex
+│   │   │   │   ├── workerpool.py
+│   │   │   │   └── Worker.py
+│   │   │   └── util.py
+│   │   ├── cmscommon
+│   │   │   ├── archive.py
+│   │   │   ├── binary.py
+│   │   │   ├── commands.py
+│   │   │   ├── constants.py
+│   │   │   ├── crypto.py
+│   │   │   ├── datetime.py
+│   │   │   ├── digest.py
+│   │   │   ├── eventsource.py
+│   │   │   ├── importers.py
+│   │   │   ├── __init__.py
+│   │   │   ├── mimetypes.py
+│   │   │   ├── terminal.py
+│   │   │   └── tex.py
+│   │   ├── cmscontrib
+│   │   │   ├── AddAdmin.py
+│   │   │   ├── AddParticipation.py
+│   │   │   ├── AddStatement.py
+│   │   │   ├── AddSubmission.py
+│   │   │   ├── AddTeam.py
+│   │   │   ├── AddTestcases.py
+│   │   │   ├── AddUser.py
+│   │   │   ├── CleanFiles.py
+│   │   │   ├── DumpExporter.py
+│   │   │   ├── DumpImporter.py
+│   │   │   ├── DumpUpdater.py
+│   │   │   ├── ExportSubmissions.py
+│   │   │   ├── ImportContest.py
+│   │   │   ├── ImportDataset.py
+│   │   │   ├── importing.py
+│   │   │   ├── ImportTask.py
+│   │   │   ├── ImportTeam.py
+│   │   │   ├── ImportUser.py
+│   │   │   ├── __init__.py
+│   │   │   ├── loaders
+│   │   │   │   ├── base_loader.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── italy_yaml.py
+│   │   │   │   ├── polygon.py
+│   │   │   │   └── tps.py
+│   │   │   ├── RemoveContest.py
+│   │   │   ├── RemoveParticipation.py
+│   │   │   ├── RemoveSubmissions.py
+│   │   │   ├── RemoveTask.py
+│   │   │   ├── RemoveUser.py
+│   │   │   ├── RWSHelper.py
+│   │   │   ├── SpoolExporter.py
+│   │   │   └── updaters
+│   │   │       ├── __init__.py
+│   │   │       ├── update_10.py
+│   │   │       ├── update_11.py
+│   │   │       ├── update_12.py
+│   │   │       ├── update_13.py
+│   │   │       ├── update_14.py
+│   │   │       ├── update_15.py
+│   │   │       ├── update_16.py
+│   │   │       ├── update_17.py
+│   │   │       ├── update_18.py
+│   │   │       ├── update_19.py
+│   │   │       ├── update_1.py
+│   │   │       ├── update_20.py
+│   │   │       ├── update_21.py
+│   │   │       ├── update_22.py
+│   │   │       ├── update_23.py
+│   │   │       ├── update_24.py
+│   │   │       ├── update_25.py
+│   │   │       ├── update_26.py
+│   │   │       ├── update_27.py
+│   │   │       ├── update_28.py
+│   │   │       ├── update_29.py
+│   │   │       ├── update_2.py
+│   │   │       ├── update_30.py
+│   │   │       ├── update_31.py
+│   │   │       ├── update_32.py
+│   │   │       ├── update_33.py
+│   │   │       ├── update_34.py
+│   │   │       ├── update_35.py
+│   │   │       ├── update_36.py
+│   │   │       ├── update_37.py
+│   │   │       ├── update_38.py
+│   │   │       ├── update_39.py
+│   │   │       ├── update_3.py
+│   │   │       ├── update_40.py
+│   │   │       ├── update_41.py
+│   │   │       ├── update_42.py
+│   │   │       ├── update_43.py
+│   │   │       ├── update_44.py
+│   │   │       ├── update_4.py
+│   │   │       ├── update_5.py
+│   │   │       ├── update_6.py
+│   │   │       ├── update_7.py
+│   │   │       ├── update_8.py
+│   │   │       └── update_9.py
+│   │   ├── cmsranking
+│   │   │   ├── Config.py
+│   │   │   ├── Contest.py
+│   │   │   ├── Entity.py
+│   │   │   ├── __init__.py
+│   │   │   ├── Logger.py
+│   │   │   ├── RankingWebServer.py
+│   │   │   ├── Scoring.py
+│   │   │   ├── static
+│   │   │   │   ├── Chart.js
+│   │   │   │   ├── Config.js
+│   │   │   │   ├── DataStore.js
+│   │   │   │   ├── HistoryStore.js
+│   │   │   │   ├── img
+│   │   │   │   │   ├── close.png
+│   │   │   │   │   ├── face.png
+│   │   │   │   │   ├── favicon.ico
+│   │   │   │   │   ├── flag.png
+│   │   │   │   │   ├── logo.png
+│   │   │   │   │   ├── tick_black.png
+│   │   │   │   │   └── tick_white.png
+│   │   │   │   ├── lib
+│   │   │   │   │   ├── eventsource.js
+│   │   │   │   │   ├── explorercanvas.js
+│   │   │   │   │   ├── jquery.js
+│   │   │   │   │   └── raphael.js
+│   │   │   │   ├── Overview.js
+│   │   │   │   ├── Ranking.css
+│   │   │   │   ├── Ranking.html
+│   │   │   │   ├── Ranking.js
+│   │   │   │   ├── Scoreboard.js
+│   │   │   │   ├── TeamSearch.js
+│   │   │   │   ├── TimeView.js
+│   │   │   │   └── UserDetail.js
+│   │   │   ├── Store.py
+│   │   │   ├── Subchange.py
+│   │   │   ├── Submission.py
+│   │   │   ├── Task.py
+│   │   │   ├── Team.py
+│   │   │   └── User.py
+│   │   ├── cmstaskenv
+│   │   │   ├── cmsMake.py
+│   │   │   ├── __init__.py
+│   │   │   └── Test.py
+│   │   └── cmstestsuite
+│   │       ├── code
+│   │       │   ├── communication-many-correct-user1.c
+│   │       │   ├── communication-many-correct-user1.cpp
+│   │       │   ├── communication-many-correct-user1.java
+│   │       │   ├── communication-many-correct-user1.pas
+│   │       │   ├── communication-many-correct-user1.py
+│   │       │   ├── communication-many-correct-user2.c
+│   │       │   ├── communication-many-correct-user2.cpp
+│   │       │   ├── communication-many-correct-user2.java
+│   │       │   ├── communication-many-correct-user2.pas
+│   │       │   ├── communication-many-correct-user2.py
+│   │       │   ├── communication-many-incorrect-user1.c
+│   │       │   ├── communication-many-incorrect-user1.cpp
+│   │       │   ├── communication-many-incorrect-user1.java
+│   │       │   ├── communication-many-incorrect-user1.pas
+│   │       │   ├── communication-many-incorrect-user1.py
+│   │       │   ├── communication-many-incorrect-user2.c
+│   │       │   ├── communication-many-incorrect-user2.cpp
+│   │       │   ├── communication-many-incorrect-user2.java
+│   │       │   ├── communication-many-incorrect-user2.pas
+│   │       │   ├── communication-many-incorrect-user2.py
+│   │       │   ├── communication-stdio-correct.c
+│   │       │   ├── communication-stdio-correct.cpp
+│   │       │   ├── communication-stdio-correct.java
+│   │       │   ├── communication-stdio-correct.pas
+│   │       │   ├── communication-stdio-correct.py
+│   │       │   ├── communication-stdio-incorrect.c
+│   │       │   ├── communication-stdio-incorrect.cpp
+│   │       │   ├── communication-stdio-incorrect.java
+│   │       │   ├── communication-stdio-incorrect.pas
+│   │       │   ├── communication-stdio-incorrect.py
+│   │       │   ├── communication-stubbed-correct.c
+│   │       │   ├── communication-stubbed-correct.cpp
+│   │       │   ├── communication-stubbed-correct.java
+│   │       │   ├── communication-stubbed-correct.pas
+│   │       │   ├── communication-stubbed-correct.py
+│   │       │   ├── communication-stubbed-incorrect.c
+│   │       │   ├── communication-stubbed-incorrect.cpp
+│   │       │   ├── communication-stubbed-incorrect.java
+│   │       │   ├── communication-stubbed-incorrect.pas
+│   │       │   ├── communication-stubbed-incorrect.py
+│   │       │   ├── compile-fail.c
+│   │       │   ├── compile-fail.cpp
+│   │       │   ├── compile-fail.cs
+│   │       │   ├── compile-fail.hs
+│   │       │   ├── compile-fail.java
+│   │       │   ├── compile-fail.pas
+│   │       │   ├── compile-fail.py
+│   │       │   ├── compile-fail.rs
+│   │       │   ├── compile-timeout.cpp
+│   │       │   ├── correct-fileio.c
+│   │       │   ├── correct-fileio.cpp
+│   │       │   ├── correct-fileio.cs
+│   │       │   ├── correct-fileio.hs
+│   │       │   ├── correct-fileio.java
+│   │       │   ├── correct-fileio.pas
+│   │       │   ├── correct-fileio.php
+│   │       │   ├── correct-fileio.py
+│   │       │   ├── correct-fileio.rs
+│   │       │   ├── correct-freopen.c
+│   │       │   ├── correct-outputonly-000.txt
+│   │       │   ├── correct-outputonly-001.txt
+│   │       │   ├── correct-pause.cpp
+│   │       │   ├── correct-stdio.c
+│   │       │   ├── correct-stdio.cpp
+│   │       │   ├── correct-stdio.cs
+│   │       │   ├── correct-stdio-cxx14.cpp
+│   │       │   ├── correct-stdio-cxx17.cpp
+│   │       │   ├── correct-stdio.hs
+│   │       │   ├── correct-stdio-inner-class.cs
+│   │       │   ├── correct-stdio-inner-class.java
+│   │       │   ├── correct-stdio.java
+│   │       │   ├── correct-stdio.pas
+│   │       │   ├── correct-stdio.php
+│   │       │   ├── correct-stdio.py
+│   │       │   ├── correct-stdio.rs
+│   │       │   ├── delete-write-input.c
+│   │       │   ├── executing-output.c
+│   │       │   ├── fork.c
+│   │       │   ├── fork.cpp
+│   │       │   ├── half-correct-fileio.c
+│   │       │   ├── half-correct-fileio.cpp
+│   │       │   ├── half-correct-fileio.cs
+│   │       │   ├── half-correct-fileio.hs
+│   │       │   ├── half-correct-fileio.java
+│   │       │   ├── half-correct-fileio.pas
+│   │       │   ├── half-correct-fileio.php
+│   │       │   ├── half-correct-fileio.py
+│   │       │   ├── half-correct-fileio.rs
+│   │       │   ├── half-correct-stdio.c
+│   │       │   ├── half-correct-stdio.cpp
+│   │       │   ├── half-correct-stdio.cs
+│   │       │   ├── half-correct-stdio.hs
+│   │       │   ├── half-correct-stdio.java
+│   │       │   ├── half-correct-stdio.pas
+│   │       │   ├── half-correct-stdio.php
+│   │       │   ├── half-correct-stdio.py
+│   │       │   ├── half-correct-stdio.rs
+│   │       │   ├── incorrect-fileio.c
+│   │       │   ├── incorrect-fileio.cpp
+│   │       │   ├── incorrect-fileio.cs
+│   │       │   ├── incorrect-fileio-emptyoutput.c
+│   │       │   ├── incorrect-fileio.hs
+│   │       │   ├── incorrect-fileio.java
+│   │       │   ├── incorrect-fileio-nooutput.c
+│   │       │   ├── incorrect-fileio.pas
+│   │       │   ├── incorrect-fileio.php
+│   │       │   ├── incorrect-fileio.py
+│   │       │   ├── incorrect-fileio.rs
+│   │       │   ├── incorrect-fileio-with-stdio.c
+│   │       │   ├── incorrect-fileio-with-stdio.cpp
+│   │       │   ├── incorrect-fileio-with-stdio.cs
+│   │       │   ├── incorrect-fileio-with-stdio.hs
+│   │       │   ├── incorrect-fileio-with-stdio.java
+│   │       │   ├── incorrect-fileio-with-stdio.pas
+│   │       │   ├── incorrect-fileio-with-stdio.php
+│   │       │   ├── incorrect-fileio-with-stdio.py
+│   │       │   ├── incorrect-fileio-with-stdio.rs
+│   │       │   ├── incorrect-outputonly-000.txt
+│   │       │   ├── incorrect-outputonly-001.txt
+│   │       │   ├── incorrect-stdio.c
+│   │       │   ├── incorrect-stdio.cpp
+│   │       │   ├── incorrect-stdio.cs
+│   │       │   ├── incorrect-stdio.hs
+│   │       │   ├── incorrect-stdio.java
+│   │       │   ├── incorrect-stdio.pas
+│   │       │   ├── incorrect-stdio.php
+│   │       │   ├── incorrect-stdio.py
+│   │       │   ├── incorrect-stdio.rs
+│   │       │   ├── managed-correct.c
+│   │       │   ├── managed-correct.cpp
+│   │       │   ├── managed-correct.cs
+│   │       │   ├── managed-correct.java
+│   │       │   ├── managed-correct.pas
+│   │       │   ├── managed-correct.py
+│   │       │   ├── managed-incorrect.c
+│   │       │   ├── managed-incorrect.cpp
+│   │       │   ├── managed-incorrect.cs
+│   │       │   ├── managed-incorrect.java
+│   │       │   ├── managed-incorrect.pas
+│   │       │   ├── managed-incorrect.py
+│   │       │   ├── nonzero-return-fileio.c
+│   │       │   ├── nonzero-return-fileio.cpp
+│   │       │   ├── nonzero-return-fileio.cs
+│   │       │   ├── nonzero-return-fileio.hs
+│   │       │   ├── nonzero-return-fileio.java
+│   │       │   ├── nonzero-return-fileio.pas
+│   │       │   ├── nonzero-return-fileio.php
+│   │       │   ├── nonzero-return-fileio.py
+│   │       │   ├── nonzero-return-fileio.rs
+│   │       │   ├── nonzero-return-stdio.c
+│   │       │   ├── nonzero-return-stdio.cpp
+│   │       │   ├── nonzero-return-stdio.cs
+│   │       │   ├── nonzero-return-stdio.hs
+│   │       │   ├── nonzero-return-stdio.java
+│   │       │   ├── nonzero-return-stdio.pas
+│   │       │   ├── nonzero-return-stdio.php
+│   │       │   ├── nonzero-return-stdio.py
+│   │       │   ├── nonzero-return-stdio.rs
+│   │       │   ├── oom-heap.c
+│   │       │   ├── oom-heap.cpp
+│   │       │   ├── oom-heap.cs
+│   │       │   ├── oom-heap.hs
+│   │       │   ├── oom-heap.java
+│   │       │   ├── oom-heap.pas
+│   │       │   ├── oom-heap.php
+│   │       │   ├── oom-heap.py
+│   │       │   ├── oom-heap.rs
+│   │       │   ├── oom-static.c
+│   │       │   ├── oom-static.cpp
+│   │       │   ├── oom-static.pas
+│   │       │   ├── rewrite-input.c
+│   │       │   ├── timeout-cputime.c
+│   │       │   ├── timeout-cputime.cpp
+│   │       │   ├── timeout-cputime.cs
+│   │       │   ├── timeout-cputime.hs
+│   │       │   ├── timeout-cputime.java
+│   │       │   ├── timeout-cputime.pas
+│   │       │   ├── timeout-cputime.php
+│   │       │   ├── timeout-cputime.py
+│   │       │   ├── timeout-cputime.rs
+│   │       │   ├── timeout-pause.cpp
+│   │       │   ├── timeout-select.cpp
+│   │       │   ├── timeout-sigstop.cpp
+│   │       │   ├── timeout-sleep.cpp
+│   │       │   ├── twosteps-correct-first.c
+│   │       │   ├── twosteps-correct-second.c
+│   │       │   ├── twosteps-half-correct-first.c
+│   │       │   ├── twosteps-incorrect-first.c
+│   │       │   ├── write-big-fileio.c
+│   │       │   ├── write-forbidden-communication.c
+│   │       │   ├── write-forbidden-fileio.c
+│   │       │   ├── write-forbidden-managed.c
+│   │       │   └── write-forbidden-stdio.c
+│   │       ├── coverage.py
+│   │       ├── functionaltestframework.py
+│   │       ├── __init__.py
+│   │       ├── profiling.py
+│   │       ├── programstarter.py
+│   │       ├── RunFunctionalTests.py
+│   │       ├── RunTests.py
+│   │       ├── RunTimeTest.py
+│   │       ├── RunUnitTests.py
+│   │       ├── StressTest.py
+│   │       ├── tasks
+│   │       │   ├── batch_50
+│   │       │   │   └── __init__.py
+│   │       │   ├── batch_fileio
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── batch_fileio_managed
+│   │       │   │   ├── code
+│   │       │   │   │   ├── checker
+│   │       │   │   │   ├── grader.c
+│   │       │   │   │   ├── grader.cpp
+│   │       │   │   │   ├── grader.cs
+│   │       │   │   │   ├── grader.java
+│   │       │   │   │   ├── grader.pas
+│   │       │   │   │   ├── grader.py
+│   │       │   │   │   └── task.h
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── batch_stdio
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── communication_fifoio_stubbed
+│   │       │   │   ├── code
+│   │       │   │   │   ├── manager
+│   │       │   │   │   ├── stub.c
+│   │       │   │   │   ├── stub.cpp
+│   │       │   │   │   ├── stub.java
+│   │       │   │   │   ├── stub.pas
+│   │       │   │   │   └── stub.py
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── communication_many_fifoio_stubbed
+│   │       │   │   ├── code
+│   │       │   │   │   ├── manager
+│   │       │   │   │   ├── stub.c
+│   │       │   │   │   ├── stub.cpp
+│   │       │   │   │   ├── stub.java
+│   │       │   │   │   ├── stub.pas
+│   │       │   │   │   └── stub.py
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── communication_many_stdio_stubbed
+│   │       │   │   ├── code
+│   │       │   │   │   ├── manager
+│   │       │   │   │   ├── stub.c
+│   │       │   │   │   ├── stub.cpp
+│   │       │   │   │   ├── stub.java
+│   │       │   │   │   ├── stub.pas
+│   │       │   │   │   └── stub.py
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── communication_stdio
+│   │       │   │   ├── code
+│   │       │   │   │   └── manager
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── communication_stdio_stubbed
+│   │       │   │   ├── code
+│   │       │   │   │   ├── manager
+│   │       │   │   │   ├── stub.c
+│   │       │   │   │   ├── stub.cpp
+│   │       │   │   │   ├── stub.java
+│   │       │   │   │   ├── stub.pas
+│   │       │   │   │   └── stub.py
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   ├── __init__.py
+│   │       │   ├── outputonly
+│   │       │   │   ├── data
+│   │       │   │   │   ├── input_000.txt
+│   │       │   │   │   ├── input_001.txt
+│   │       │   │   │   ├── output_000.txt
+│   │       │   │   │   └── output_001.txt
+│   │       │   │   └── __init__.py
+│   │       │   ├── outputonly_comparator
+│   │       │   │   ├── code
+│   │       │   │   │   └── checker
+│   │       │   │   ├── data
+│   │       │   │   │   ├── input_000.txt
+│   │       │   │   │   ├── input_001.txt
+│   │       │   │   │   ├── output_000.txt
+│   │       │   │   │   └── output_001.txt
+│   │       │   │   └── __init__.py
+│   │       │   ├── twosteps
+│   │       │   │   ├── code
+│   │       │   │   │   ├── first.h
+│   │       │   │   │   ├── manager.c
+│   │       │   │   │   ├── manager.h
+│   │       │   │   │   └── second.h
+│   │       │   │   ├── data
+│   │       │   │   │   ├── 1.in
+│   │       │   │   │   ├── 1.out
+│   │       │   │   │   ├── 2.in
+│   │       │   │   │   └── 2.out
+│   │       │   │   └── __init__.py
+│   │       │   └── twosteps_comparator
+│   │       │       ├── code
+│   │       │       │   ├── checker
+│   │       │       │   ├── first.h
+│   │       │       │   ├── manager.c
+│   │       │       │   ├── manager.h
+│   │       │       │   └── second.h
+│   │       │       ├── data
+│   │       │       │   ├── 1.in
+│   │       │       │   ├── 1.out
+│   │       │       │   ├── 2.in
+│   │       │       │   └── 2.out
+│   │       │       └── __init__.py
+│   │       ├── Test.py
+│   │       ├── testrunner.py
+│   │       ├── Tests.py
+│   │       ├── unit_tests
+│   │       │   ├── databasemixin.py
+│   │       │   ├── filesystemmixin.py
+│   │       │   ├── grading
+│   │       │   │   ├── __init__.py
+│   │       │   │   ├── init_test.py
+│   │       │   │   ├── ParameterTypesTest.py
+│   │       │   │   ├── SandboxTest.py
+│   │       │   │   ├── scoretypes
+│   │       │   │   │   ├── GroupMinTest.py
+│   │       │   │   │   ├── GroupMulTest.py
+│   │       │   │   │   ├── GroupThresholdTest.py
+│   │       │   │   │   ├── __init__.py
+│   │       │   │   │   ├── scoretypetestutils.py
+│   │       │   │   │   └── SumTest.py
+│   │       │   │   ├── scoring_test.py
+│   │       │   │   ├── steps
+│   │       │   │   │   ├── compilation_test.py
+│   │       │   │   │   ├── fakeisolatesandbox.py
+│   │       │   │   │   ├── __init__.py
+│   │       │   │   │   ├── stats_test.py
+│   │       │   │   │   ├── trusted_test.py
+│   │       │   │   │   ├── utils_test.py
+│   │       │   │   │   └── whitediff_test.py
+│   │       │   │   └── tasktypes
+│   │       │   │       ├── BatchTest.py
+│   │       │   │       ├── CommunicationTest.py
+│   │       │   │       ├── __init__.py
+│   │       │   │       ├── OutputOnlyTest.py
+│   │       │   │       ├── tasktypetestutils.py
+│   │       │   │       └── util_test.py
+│   │       │   ├── __init__.py
+│   │       │   ├── server
+│   │       │   │   ├── contest
+│   │       │   │   │   ├── authentication_test.py
+│   │       │   │   │   ├── communication_test.py
+│   │       │   │   │   ├── __init__.py
+│   │       │   │   │   ├── phase_management_test.py
+│   │       │   │   │   ├── printing_test.py
+│   │       │   │   │   ├── submission
+│   │       │   │   │   │   ├── check_test.py
+│   │       │   │   │   │   ├── file_matching_test.py
+│   │       │   │   │   │   ├── file_retrieval_test.py
+│   │       │   │   │   │   ├── __init__.py
+│   │       │   │   │   │   ├── utils_test.py
+│   │       │   │   │   │   └── workflow_test.py
+│   │       │   │   │   └── tokening_test.py
+│   │       │   │   ├── file_middleware_test.py
+│   │       │   │   ├── __init__.py
+│   │       │   │   └── util_test.py
+│   │       │   ├── testidgenerator.py
+│   │       │   └── util_test.py
+│   │       └── web
+│   │           ├── AWSRequests.py
+│   │           ├── CWSRequests.py
+│   │           └── __init__.py
+│   └── scripts-3.8
+│       ├── cmsAdminWebServer
+│       ├── cmsChecker
+│       ├── cmsContestWebServer
+│       ├── cmsDropDB
+│       ├── cmsEvaluationService
+│       ├── cmsInitDB
+│       ├── cmsLogService
+│       ├── cmsPrintingService
+│       ├── cmsProxyService
+│       ├── cmsRankingWebServer
+│       ├── cmsResourceService
+│       ├── cmsScoringService
+│       └── cmsWorker
+├── cms
+│   ├── conf.py
+│   ├── db
+│   │   ├── admin.py
+│   │   ├── base.py
+│   │   ├── contest.py
+│   │   ├── drop.py
+│   │   ├── filecacher.py
+│   │   ├── fsobject.py
+│   │   ├── __init__.py
+│   │   ├── init.py
+│   │   ├── printjob.py
+│   │   ├── session.py
+│   │   ├── submission.py
+│   │   ├── task.py
+│   │   ├── types.py
+│   │   ├── user.py
+│   │   ├── usertest.py
+│   │   └── util.py
+│   ├── grading
+│   │   ├── __init__.py
+│   │   ├── Job.py
+│   │   ├── languagemanager.py
+│   │   ├── language.py
+│   │   ├── languages
+│   │   │   ├── c11_gcc.py
+│   │   │   ├── cpp11_gpp.py
+│   │   │   ├── cpp14_gpp.py
+│   │   │   ├── cpp17_gpp.py
+│   │   │   ├── csharp_mono.py
+│   │   │   ├── haskell_ghc.py
+│   │   │   ├── __init__.py
+│   │   │   ├── java_jdk.py
+│   │   │   ├── pascal_fpc.py
+│   │   │   ├── php.py
+│   │   │   ├── python2_cpython.py
+│   │   │   ├── python3_cpython.py
+│   │   │   └── rust.py
+│   │   ├── ParameterTypes.py
+│   │   ├── Sandbox.py
+│   │   ├── scoretypes
+│   │   │   ├── abc.py
+│   │   │   ├── GroupMin.py
+│   │   │   ├── GroupMul.py
+│   │   │   ├── GroupThreshold.py
+│   │   │   ├── __init__.py
+│   │   │   └── Sum.py
+│   │   ├── scoring.py
+│   │   ├── steps
+│   │   │   ├── compilation.py
+│   │   │   ├── evaluation.py
+│   │   │   ├── __init__.py
+│   │   │   ├── messages.py
+│   │   │   ├── stats.py
+│   │   │   ├── trusted.py
+│   │   │   ├── utils.py
+│   │   │   └── whitediff.py
+│   │   └── tasktypes
+│   │       ├── abc.py
+│   │       ├── Batch.py
+│   │       ├── Communication.py
+│   │       ├── __init__.py
+│   │       ├── OutputOnly.py
+│   │       ├── TwoSteps.py
+│   │       └── util.py
+│   ├── __init__.py
+│   ├── io
+│   │   ├── __init__.py
+│   │   ├── priorityqueue.py
+│   │   ├── PsycoGevent.py
+│   │   ├── rpc.py
+│   │   ├── service.py
+│   │   ├── triggeredservice.py
+│   │   ├── web_rpc.py
+│   │   └── web_service.py
+│   ├── locale
+│   │   ├── bg
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── bs
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── cms.pot
+│   │   ├── cs
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── de
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── es
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── et
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── fr
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── __init__.py
+│   │   ├── it
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── ja
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── ko
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── locale.py
+│   │   ├── lt
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── lv
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── nl
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── ro
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── ru
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── sl
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── uk
+│   │   │   └── LC_MESSAGES
+│   │   │       └── cms.po
+│   │   ├── vi
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   ├── zh_CN
+│   │   │   └── LC_MESSAGES
+│   │   │       ├── cms.mo
+│   │   │       └── cms.po
+│   │   └── zh_TW
+│   │       └── LC_MESSAGES
+│   │           ├── cms.mo
+│   │           └── cms.po
+│   ├── log.py
+│   ├── plugin.py
+│   ├── server
+│   │   ├── admin
+│   │   │   ├── authentication.py
+│   │   │   ├── formatting.py
+│   │   │   ├── handlers
+│   │   │   │   ├── admin.py
+│   │   │   │   ├── base.py
+│   │   │   │   ├── contestannouncement.py
+│   │   │   │   ├── contest.py
+│   │   │   │   ├── contestquestion.py
+│   │   │   │   ├── contestranking.py
+│   │   │   │   ├── contestsubmission.py
+│   │   │   │   ├── contesttask.py
+│   │   │   │   ├── contestuser.py
+│   │   │   │   ├── dataset.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── main.py
+│   │   │   │   ├── submission.py
+│   │   │   │   ├── task.py
+│   │   │   │   ├── user.py
+│   │   │   │   └── usertest.py
+│   │   │   ├── __init__.py
+│   │   │   ├── jinja2_toolbox.py
+│   │   │   ├── rpc_authorization.py
+│   │   │   ├── server.py
+│   │   │   ├── static
+│   │   │   │   ├── aws_style.css
+│   │   │   │   ├── aws_utils.js
+│   │   │   │   ├── jq
+│   │   │   │   │   ├── jqplot.dateAxisRenderer.min.js
+│   │   │   │   │   ├── jqplot.enhancedLegendRenderer.min.js
+│   │   │   │   │   ├── jquery.jqplot.min.css
+│   │   │   │   │   └── jquery.jqplot.min.js
+│   │   │   │   ├── reset.css
+│   │   │   │   ├── sh
+│   │   │   │   │   ├── shBrushCpp.js
+│   │   │   │   │   ├── shBrushDelphi.js
+│   │   │   │   │   ├── shCore.css
+│   │   │   │   │   ├── shCore.js
+│   │   │   │   │   └── shThemeDefault.css
+│   │   │   │   └── web_rpc.js
+│   │   │   └── templates
+│   │   │       ├── activate_dataset.html
+│   │   │       ├── add_admin.html
+│   │   │       ├── add_attachment.html
+│   │   │       ├── add_contest.html
+│   │   │       ├── add_dataset.html
+│   │   │       ├── add_manager.html
+│   │   │       ├── add_statement.html
+│   │   │       ├── add_task.html
+│   │   │       ├── add_team.html
+│   │   │       ├── add_testcase.html
+│   │   │       ├── add_testcases.html
+│   │   │       ├── add_user.html
+│   │   │       ├── admin.html
+│   │   │       ├── admins.html
+│   │   │       ├── announcements.html
+│   │   │       ├── base.html
+│   │   │       ├── contest.html
+│   │   │       ├── contest_remove.html
+│   │   │       ├── contests.html
+│   │   │       ├── contest_submissions.html
+│   │   │       ├── contest_tasks.html
+│   │   │       ├── contest_users.html
+│   │   │       ├── contest_user_tests.html
+│   │   │       ├── dataset.html
+│   │   │       ├── delete_dataset.html
+│   │   │       ├── download_testcases.html
+│   │   │       ├── error.html
+│   │   │       ├── fragments
+│   │   │       │   ├── admin_form.html
+│   │   │       │   ├── dataset_selector.html
+│   │   │       │   ├── hashed_password_form.html
+│   │   │       │   ├── overload_warning.html
+│   │   │       │   ├── user_test_row.html
+│   │   │       │   └── user_test_rows.html
+│   │   │       ├── login.html
+│   │   │       ├── macro
+│   │   │       │   ├── pages.html
+│   │   │       │   ├── reevaluation_buttons.html
+│   │   │       │   └── submission.html
+│   │   │       ├── overview.html
+│   │   │       ├── participation.html
+│   │   │       ├── participation_remove.html
+│   │   │       ├── questions.html
+│   │   │       ├── ranking.html
+│   │   │       ├── ranking.txt
+│   │   │       ├── rename_dataset.html
+│   │   │       ├── resources.html
+│   │   │       ├── resourceslist.html
+│   │   │       ├── submission.html
+│   │   │       ├── task.html
+│   │   │       ├── task_remove.html
+│   │   │       ├── tasks.html
+│   │   │       ├── team.html
+│   │   │       ├── teams.html
+│   │   │       ├── user.html
+│   │   │       ├── user_remove.html
+│   │   │       ├── users.html
+│   │   │       └── user_test.html
+│   │   ├── contest
+│   │   │   ├── authentication.py
+│   │   │   ├── communication.py
+│   │   │   ├── formatting.py
+│   │   │   ├── handlers
+│   │   │   │   ├── base.py
+│   │   │   │   ├── communication.py
+│   │   │   │   ├── contest.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── main.py
+│   │   │   │   ├── task.py
+│   │   │   │   ├── tasksubmission.py
+│   │   │   │   └── taskusertest.py
+│   │   │   ├── __init__.py
+│   │   │   ├── jinja2_toolbox.py
+│   │   │   ├── phase_management.py
+│   │   │   ├── printing.py
+│   │   │   ├── server.py
+│   │   │   ├── static
+│   │   │   │   ├── css
+│   │   │   │   │   └── bootstrap.css
+│   │   │   │   ├── cws_style.css
+│   │   │   │   ├── cws_utils.js
+│   │   │   │   ├── img
+│   │   │   │   │   ├── glyphicons-halflings.png
+│   │   │   │   │   ├── glyphicons-halflings-white.png
+│   │   │   │   │   └── mimetypes
+│   │   │   │   │       ├── application-x-executable.png
+│   │   │   │   │       ├── audio-x-generic.png
+│   │   │   │   │       ├── font-x-generic.png
+│   │   │   │   │       ├── image-x-generic.png
+│   │   │   │   │       ├── package-x-generic.png
+│   │   │   │   │       ├── text-html.png
+│   │   │   │   │       ├── text-x-generic.png
+│   │   │   │   │       ├── text-x-generic-template.png
+│   │   │   │   │       ├── text-x-script.png
+│   │   │   │   │       ├── unknown.png
+│   │   │   │   │       ├── video-x-generic.png
+│   │   │   │   │       ├── x-office-address-book.png
+│   │   │   │   │       ├── x-office-calendar.png
+│   │   │   │   │       ├── x-office-document.png
+│   │   │   │   │       ├── x-office-presentation.png
+│   │   │   │   │       └── x-office-spreadsheet.png
+│   │   │   │   └── js
+│   │   │   │       └── bootstrap.js
+│   │   │   ├── submission
+│   │   │   │   ├── check.py
+│   │   │   │   ├── file_matching.py
+│   │   │   │   ├── file_retrieval.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── utils.py
+│   │   │   │   └── workflow.py
+│   │   │   ├── templates
+│   │   │   │   ├── base.html
+│   │   │   │   ├── communication.html
+│   │   │   │   ├── contest.html
+│   │   │   │   ├── contest_list.html
+│   │   │   │   ├── documentation.html
+│   │   │   │   ├── error.html
+│   │   │   │   ├── macro
+│   │   │   │   │   └── submission.html
+│   │   │   │   ├── overview.html
+│   │   │   │   ├── printing.html
+│   │   │   │   ├── register.html
+│   │   │   │   ├── submission_details.html
+│   │   │   │   ├── task_description.html
+│   │   │   │   ├── task_submissions.html
+│   │   │   │   ├── test_interface.html
+│   │   │   │   ├── user_test_details.html
+│   │   │   │   └── user_test_row.html
+│   │   │   └── tokening.py
+│   │   ├── file_middleware.py
+│   │   ├── __init__.py
+│   │   ├── jinja2_toolbox.py
+│   │   ├── static
+│   │   │   ├── favicon.ico
+│   │   │   ├── jq
+│   │   │   │   ├── jquery-3.6.0.min.js
+│   │   │   │   └── jquery-migrate-3.3.2.min.js
+│   │   │   └── loading.gif
+│   │   └── util.py
+│   ├── service
+│   │   ├── Checker.py
+│   │   ├── esoperations.py
+│   │   ├── EvaluationService.py
+│   │   ├── flushingdict.py
+│   │   ├── __init__.py
+│   │   ├── LogService.py
+│   │   ├── PrintingService.py
+│   │   ├── ProxyService.py
+│   │   ├── ResourceService.py
+│   │   ├── scoringoperations.py
+│   │   ├── ScoringService.py
+│   │   ├── templates
+│   │   │   └── printing
+│   │   │       └── title_page.tex
+│   │   ├── workerpool.py
+│   │   └── Worker.py
+│   └── util.py
+├── cmscommon
+│   ├── archive.py
+│   ├── binary.py
+│   ├── commands.py
+│   ├── constants.py
+│   ├── crypto.py
+│   ├── datetime.py
+│   ├── digest.py
+│   ├── eventsource.py
+│   ├── importers.py
+│   ├── __init__.py
+│   ├── mimetypes.py
+│   ├── terminal.py
+│   └── tex.py
+├── cmscontrib
+│   ├── AddAdmin.py
+│   ├── AddParticipation.py
+│   ├── AddStatement.py
+│   ├── AddSubmission.py
+│   ├── AddTeam.py
+│   ├── AddTestcases.py
+│   ├── AddUser.py
+│   ├── check_cache.sh
+│   ├── CleanFiles.py
+│   ├── clean_files_tombstone.sql
+│   ├── DumpExporter.py
+│   ├── DumpImporter.py
+│   ├── DumpUpdater.py
+│   ├── ExportSubmissions.py
+│   ├── ImportContest.py
+│   ├── ImportDataset.py
+│   ├── importing.py
+│   ├── ImportTask.py
+│   ├── ImportTeam.py
+│   ├── ImportUser.py
+│   ├── __init__.py
+│   ├── loaders
+│   │   ├── base_loader.py
+│   │   ├── __init__.py
+│   │   ├── italy_yaml.py
+│   │   ├── polygon
+│   │   │   ├── testlib-cms.patch
+│   │   │   └── testlib.h
+│   │   ├── polygon.py
+│   │   └── tps.py
+│   ├── RemoveContest.py
+│   ├── RemoveParticipation.py
+│   ├── RemoveSubmissions.py
+│   ├── RemoveTask.py
+│   ├── RemoveUser.py
+│   ├── RWSHelper.py
+│   ├── setup_fs_storage.sh
+│   ├── SpoolExporter.py
+│   └── updaters
+│       ├── __init__.py
+│       ├── update_10.py
+│       ├── update_10.sql
+│       ├── update_11.py
+│       ├── update_11.sql
+│       ├── update_12.py
+│       ├── update_12.sql
+│       ├── update_13.py
+│       ├── update_13.sql
+│       ├── update_14.py
+│       ├── update_14.sql
+│       ├── update_15.py
+│       ├── update_15.sql
+│       ├── update_16.py
+│       ├── update_16.sql
+│       ├── update_17.py
+│       ├── update_17.sql
+│       ├── update_18.py
+│       ├── update_18.sql
+│       ├── update_19.py
+│       ├── update_19.sql
+│       ├── update_1.py
+│       ├── update_20.py
+│       ├── update_20.sql
+│       ├── update_21.py
+│       ├── update_21.sql
+│       ├── update_22.py
+│       ├── update_22.sql
+│       ├── update_23.py
+│       ├── update_23.sql
+│       ├── update_24.py
+│       ├── update_24.sql
+│       ├── update_25.py
+│       ├── update_25.sql
+│       ├── update_26.py
+│       ├── update_27.py
+│       ├── update_28.py
+│       ├── update_29.py
+│       ├── update_2.py
+│       ├── update_30.py
+│       ├── update_31.py
+│       ├── update_32.py
+│       ├── update_33.py
+│       ├── update_34.py
+│       ├── update_35.py
+│       ├── update_36.py
+│       ├── update_37.py
+│       ├── update_38.py
+│       ├── update_39.py
+│       ├── update_3.py
+│       ├── update_40.py
+│       ├── update_41.py
+│       ├── update_42.py
+│       ├── update_43.py
+│       ├── update_44.py
+│       ├── update_4.py
+│       ├── update_5.py
+│       ├── update_6.py
+│       ├── update_7.py
+│       ├── update_8.py
+│       └── update_9.py
+├── cms.egg-info
+│   ├── dependency_links.txt
+│   ├── entry_points.txt
+│   ├── PKG-INFO
+│   ├── SOURCES.txt
+│   └── top_level.txt
+├── cmsranking
+│   ├── Config.py
+│   ├── Contest.py
+│   ├── Entity.py
+│   ├── images
+│   │   ├── close.svg
+│   │   ├── face.svg
+│   │   ├── flag.svg
+│   │   ├── logo_placeholder.svg
+│   │   ├── logo.png
+│   │   ├── logo.svg
+│   │   └── tick.svg
+│   ├── __init__.py
+│   ├── Logger.py
+│   ├── RankingWebServer.py
+│   ├── Scoring.py
+│   ├── static
+│   │   ├── Chart.js
+│   │   ├── Config.js
+│   │   ├── DataStore.js
+│   │   ├── HistoryStore.js
+│   │   ├── img
+│   │   │   ├── close.png
+│   │   │   ├── face.png
+│   │   │   ├── favicon.ico
+│   │   │   ├── flag.png
+│   │   │   ├── logo.png
+│   │   │   ├── tick_black.png
+│   │   │   └── tick_white.png
+│   │   ├── lib
+│   │   │   ├── eventsource.js
+│   │   │   ├── explorercanvas.js
+│   │   │   ├── jquery.js
+│   │   │   └── raphael.js
+│   │   ├── Overview.js
+│   │   ├── Ranking.css
+│   │   ├── Ranking.html
+│   │   ├── Ranking.js
+│   │   ├── Scoreboard.js
+│   │   ├── TeamSearch.js
+│   │   ├── TimeView.js
+│   │   └── UserDetail.js
+│   ├── Store.py
+│   ├── Subchange.py
+│   ├── Submission.py
+│   ├── Task.py
+│   ├── Team.py
+│   └── User.py
+├── cmstaskenv
+│   ├── cmsMake.py
+│   ├── __init__.py
+│   └── Test.py
+├── cmstestsuite
+│   ├── code
+│   │   ├── communication-many-correct-user1.c
+│   │   ├── communication-many-correct-user1.cpp
+│   │   ├── communication-many-correct-user1.java
+│   │   ├── communication-many-correct-user1.pas
+│   │   ├── communication-many-correct-user1.py
+│   │   ├── communication-many-correct-user2.c
+│   │   ├── communication-many-correct-user2.cpp
+│   │   ├── communication-many-correct-user2.java
+│   │   ├── communication-many-correct-user2.pas
+│   │   ├── communication-many-correct-user2.py
+│   │   ├── communication-many-incorrect-user1.c
+│   │   ├── communication-many-incorrect-user1.cpp
+│   │   ├── communication-many-incorrect-user1.java
+│   │   ├── communication-many-incorrect-user1.pas
+│   │   ├── communication-many-incorrect-user1.py
+│   │   ├── communication-many-incorrect-user2.c
+│   │   ├── communication-many-incorrect-user2.cpp
+│   │   ├── communication-many-incorrect-user2.java
+│   │   ├── communication-many-incorrect-user2.pas
+│   │   ├── communication-many-incorrect-user2.py
+│   │   ├── communication-stdio-correct.c
+│   │   ├── communication-stdio-correct.cpp
+│   │   ├── communication-stdio-correct.java
+│   │   ├── communication-stdio-correct.pas
+│   │   ├── communication-stdio-correct.py
+│   │   ├── communication-stdio-incorrect.c
+│   │   ├── communication-stdio-incorrect.cpp
+│   │   ├── communication-stdio-incorrect.java
+│   │   ├── communication-stdio-incorrect.pas
+│   │   ├── communication-stdio-incorrect.py
+│   │   ├── communication-stubbed-correct.c -> managed-correct.c
+│   │   ├── communication-stubbed-correct.cpp -> managed-correct.cpp
+│   │   ├── communication-stubbed-correct.java
+│   │   ├── communication-stubbed-correct.pas
+│   │   ├── communication-stubbed-correct.py
+│   │   ├── communication-stubbed-incorrect.c -> managed-incorrect.c
+│   │   ├── communication-stubbed-incorrect.cpp -> managed-incorrect.cpp
+│   │   ├── communication-stubbed-incorrect.java
+│   │   ├── communication-stubbed-incorrect.pas
+│   │   ├── communication-stubbed-incorrect.py
+│   │   ├── compile-fail.c
+│   │   ├── compile-fail.cpp
+│   │   ├── compile-fail.cs
+│   │   ├── compile-fail.hs
+│   │   ├── compile-fail.java
+│   │   ├── compile-fail.pas
+│   │   ├── compile-fail.py
+│   │   ├── compile-fail.rs
+│   │   ├── compile-timeout.cpp
+│   │   ├── correct-fileio.c
+│   │   ├── correct-fileio.cpp
+│   │   ├── correct-fileio.cs
+│   │   ├── correct-fileio.hs
+│   │   ├── correct-fileio.java
+│   │   ├── correct-fileio.pas
+│   │   ├── correct-fileio.php
+│   │   ├── correct-fileio.py
+│   │   ├── correct-fileio.rs
+│   │   ├── correct-freopen.c
+│   │   ├── correct-outputonly-000.txt
+│   │   ├── correct-outputonly-001.txt
+│   │   ├── correct-pause.cpp
+│   │   ├── correct-stdio.c
+│   │   ├── correct-stdio.cpp
+│   │   ├── correct-stdio.cs
+│   │   ├── correct-stdio-cxx14.cpp
+│   │   ├── correct-stdio-cxx17.cpp
+│   │   ├── correct-stdio.hs
+│   │   ├── correct-stdio-inner-class.cs
+│   │   ├── correct-stdio-inner-class.java
+│   │   ├── correct-stdio.java
+│   │   ├── correct-stdio.pas
+│   │   ├── correct-stdio.php
+│   │   ├── correct-stdio.py
+│   │   ├── correct-stdio.rs
+│   │   ├── delete-write-input.c
+│   │   ├── executing-output.c
+│   │   ├── fork.c
+│   │   ├── fork.cpp
+│   │   ├── half-correct-fileio.c
+│   │   ├── half-correct-fileio.cpp
+│   │   ├── half-correct-fileio.cs
+│   │   ├── half-correct-fileio.hs
+│   │   ├── half-correct-fileio.java
+│   │   ├── half-correct-fileio.pas
+│   │   ├── half-correct-fileio.php
+│   │   ├── half-correct-fileio.py
+│   │   ├── half-correct-fileio.rs
+│   │   ├── half-correct-stdio.c
+│   │   ├── half-correct-stdio.cpp
+│   │   ├── half-correct-stdio.cs
+│   │   ├── half-correct-stdio.hs
+│   │   ├── half-correct-stdio.java
+│   │   ├── half-correct-stdio.pas
+│   │   ├── half-correct-stdio.php
+│   │   ├── half-correct-stdio.py
+│   │   ├── half-correct-stdio.rs
+│   │   ├── incorrect-fileio.c
+│   │   ├── incorrect-fileio.cpp
+│   │   ├── incorrect-fileio.cs
+│   │   ├── incorrect-fileio-emptyoutput.c
+│   │   ├── incorrect-fileio.hs
+│   │   ├── incorrect-fileio.java
+│   │   ├── incorrect-fileio-nooutput.c
+│   │   ├── incorrect-fileio.pas
+│   │   ├── incorrect-fileio.php
+│   │   ├── incorrect-fileio.py
+│   │   ├── incorrect-fileio.rs
+│   │   ├── incorrect-fileio-with-stdio.c -> correct-stdio.c
+│   │   ├── incorrect-fileio-with-stdio.cpp -> correct-stdio.cpp
+│   │   ├── incorrect-fileio-with-stdio.cs
+│   │   ├── incorrect-fileio-with-stdio.hs
+│   │   ├── incorrect-fileio-with-stdio.java
+│   │   ├── incorrect-fileio-with-stdio.pas -> correct-stdio.pas
+│   │   ├── incorrect-fileio-with-stdio.php -> correct-stdio.php
+│   │   ├── incorrect-fileio-with-stdio.py -> correct-stdio.py
+│   │   ├── incorrect-fileio-with-stdio.rs -> correct-stdio.rs
+│   │   ├── incorrect-outputonly-000.txt
+│   │   ├── incorrect-outputonly-001.txt
+│   │   ├── incorrect-stdio.c
+│   │   ├── incorrect-stdio.cpp
+│   │   ├── incorrect-stdio.cs
+│   │   ├── incorrect-stdio.hs
+│   │   ├── incorrect-stdio.java
+│   │   ├── incorrect-stdio.pas
+│   │   ├── incorrect-stdio.php
+│   │   ├── incorrect-stdio.py
+│   │   ├── incorrect-stdio.rs
+│   │   ├── managed-correct.c
+│   │   ├── managed-correct.cpp
+│   │   ├── managed-correct.cs
+│   │   ├── managed-correct.java
+│   │   ├── managed-correct.pas
+│   │   ├── managed-correct.py
+│   │   ├── managed-incorrect.c
+│   │   ├── managed-incorrect.cpp
+│   │   ├── managed-incorrect.cs
+│   │   ├── managed-incorrect.java
+│   │   ├── managed-incorrect.pas
+│   │   ├── managed-incorrect.py
+│   │   ├── nonzero-return-fileio.c
+│   │   ├── nonzero-return-fileio.cpp
+│   │   ├── nonzero-return-fileio.cs
+│   │   ├── nonzero-return-fileio.hs
+│   │   ├── nonzero-return-fileio.java
+│   │   ├── nonzero-return-fileio.pas
+│   │   ├── nonzero-return-fileio.php
+│   │   ├── nonzero-return-fileio.py
+│   │   ├── nonzero-return-fileio.rs
+│   │   ├── nonzero-return-stdio.c
+│   │   ├── nonzero-return-stdio.cpp
+│   │   ├── nonzero-return-stdio.cs
+│   │   ├── nonzero-return-stdio.hs
+│   │   ├── nonzero-return-stdio.java
+│   │   ├── nonzero-return-stdio.pas
+│   │   ├── nonzero-return-stdio.php
+│   │   ├── nonzero-return-stdio.py
+│   │   ├── nonzero-return-stdio.rs
+│   │   ├── oom-heap.c
+│   │   ├── oom-heap.cpp
+│   │   ├── oom-heap.cs
+│   │   ├── oom-heap.hs
+│   │   ├── oom-heap.java
+│   │   ├── oom-heap.pas
+│   │   ├── oom-heap.php
+│   │   ├── oom-heap.py
+│   │   ├── oom-heap.rs
+│   │   ├── oom-static.c
+│   │   ├── oom-static.cpp
+│   │   ├── oom-static.pas
+│   │   ├── rewrite-input.c
+│   │   ├── timeout-cputime.c
+│   │   ├── timeout-cputime.cpp
+│   │   ├── timeout-cputime.cs
+│   │   ├── timeout-cputime.hs
+│   │   ├── timeout-cputime.java
+│   │   ├── timeout-cputime.pas
+│   │   ├── timeout-cputime.php
+│   │   ├── timeout-cputime.py
+│   │   ├── timeout-cputime.rs
+│   │   ├── timeout-pause.cpp
+│   │   ├── timeout-select.cpp
+│   │   ├── timeout-sigstop.cpp
+│   │   ├── timeout-sleep.cpp
+│   │   ├── twosteps-correct-first.c
+│   │   ├── twosteps-correct-second.c
+│   │   ├── twosteps-half-correct-first.c
+│   │   ├── twosteps-incorrect-first.c
+│   │   ├── write-big-fileio.c
+│   │   ├── write-forbidden-communication.c
+│   │   ├── write-forbidden-fileio.c
+│   │   ├── write-forbidden-managed.c
+│   │   └── write-forbidden-stdio.c
+│   ├── coverage.py
+│   ├── functionaltestframework.py
+│   ├── i18n
+│   │   ├── check_translations.sh
+│   │   └── parse_msgfmt.py
+│   ├── __init__.py
+│   ├── profiling.py
+│   ├── programstarter.py
+│   ├── RunFunctionalTests.py
+│   ├── RunTests.py
+│   ├── RunTimeTest.py
+│   ├── RunUnitTests.py
+│   ├── scripts
+│   │   ├── fake_disable.sh
+│   │   ├── fake_enable.sh
+│   │   ├── README
+│   │   ├── reinit.sh
+│   │   └── runtimetest.sh
+│   ├── StressTest.py
+│   ├── tasks
+│   │   ├── batch_50
+│   │   │   ├── data
+│   │   │   │   ├── 0.in
+│   │   │   │   ├── 0.out
+│   │   │   │   ├── 10.in
+│   │   │   │   ├── 10.out
+│   │   │   │   ├── 11.in
+│   │   │   │   ├── 11.out
+│   │   │   │   ├── 12.in
+│   │   │   │   ├── 12.out
+│   │   │   │   ├── 13.in
+│   │   │   │   ├── 13.out
+│   │   │   │   ├── 14.in
+│   │   │   │   ├── 14.out
+│   │   │   │   ├── 15.in
+│   │   │   │   ├── 15.out
+│   │   │   │   ├── 16.in
+│   │   │   │   ├── 16.out
+│   │   │   │   ├── 17.in
+│   │   │   │   ├── 17.out
+│   │   │   │   ├── 18.in
+│   │   │   │   ├── 18.out
+│   │   │   │   ├── 19.in
+│   │   │   │   ├── 19.out
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 20.in
+│   │   │   │   ├── 20.out
+│   │   │   │   ├── 21.in
+│   │   │   │   ├── 21.out
+│   │   │   │   ├── 22.in
+│   │   │   │   ├── 22.out
+│   │   │   │   ├── 23.in
+│   │   │   │   ├── 23.out
+│   │   │   │   ├── 24.in
+│   │   │   │   ├── 24.out
+│   │   │   │   ├── 25.in
+│   │   │   │   ├── 25.out
+│   │   │   │   ├── 26.in
+│   │   │   │   ├── 26.out
+│   │   │   │   ├── 27.in
+│   │   │   │   ├── 27.out
+│   │   │   │   ├── 28.in
+│   │   │   │   ├── 28.out
+│   │   │   │   ├── 29.in
+│   │   │   │   ├── 29.out
+│   │   │   │   ├── 2.in
+│   │   │   │   ├── 2.out
+│   │   │   │   ├── 30.in
+│   │   │   │   ├── 30.out
+│   │   │   │   ├── 31.in
+│   │   │   │   ├── 31.out
+│   │   │   │   ├── 32.in
+│   │   │   │   ├── 32.out
+│   │   │   │   ├── 33.in
+│   │   │   │   ├── 33.out
+│   │   │   │   ├── 34.in
+│   │   │   │   ├── 34.out
+│   │   │   │   ├── 35.in
+│   │   │   │   ├── 35.out
+│   │   │   │   ├── 36.in
+│   │   │   │   ├── 36.out
+│   │   │   │   ├── 37.in
+│   │   │   │   ├── 37.out
+│   │   │   │   ├── 38.in
+│   │   │   │   ├── 38.out
+│   │   │   │   ├── 39.in
+│   │   │   │   ├── 39.out
+│   │   │   │   ├── 3.in
+│   │   │   │   ├── 3.out
+│   │   │   │   ├── 40.in
+│   │   │   │   ├── 40.out
+│   │   │   │   ├── 41.in
+│   │   │   │   ├── 41.out
+│   │   │   │   ├── 42.in
+│   │   │   │   ├── 42.out
+│   │   │   │   ├── 43.in
+│   │   │   │   ├── 43.out
+│   │   │   │   ├── 44.in
+│   │   │   │   ├── 44.out
+│   │   │   │   ├── 45.in
+│   │   │   │   ├── 45.out
+│   │   │   │   ├── 46.in
+│   │   │   │   ├── 46.out
+│   │   │   │   ├── 47.in
+│   │   │   │   ├── 47.out
+│   │   │   │   ├── 48.in
+│   │   │   │   ├── 48.out
+│   │   │   │   ├── 49.in
+│   │   │   │   ├── 49.out
+│   │   │   │   ├── 4.in
+│   │   │   │   ├── 4.out
+│   │   │   │   ├── 5.in
+│   │   │   │   ├── 5.out
+│   │   │   │   ├── 6.in
+│   │   │   │   ├── 6.out
+│   │   │   │   ├── 7.in
+│   │   │   │   ├── 7.out
+│   │   │   │   ├── 8.in
+│   │   │   │   ├── 8.out
+│   │   │   │   ├── 9.in
+│   │   │   │   └── 9.out
+│   │   │   └── __init__.py
+│   │   ├── batch_fileio
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── batch_fileio_managed
+│   │   │   ├── code
+│   │   │   │   ├── checker
+│   │   │   │   ├── grader.c
+│   │   │   │   ├── grader.cpp
+│   │   │   │   ├── grader.cs
+│   │   │   │   ├── grader.java
+│   │   │   │   ├── grader.pas
+│   │   │   │   ├── grader.py
+│   │   │   │   └── task.h
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── batch_stdio
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── communication_fifoio_stubbed
+│   │   │   ├── code
+│   │   │   │   ├── manager
+│   │   │   │   ├── stub.c
+│   │   │   │   ├── stub.cpp
+│   │   │   │   ├── stub.java
+│   │   │   │   ├── stub.pas
+│   │   │   │   └── stub.py
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── communication_many_fifoio_stubbed
+│   │   │   ├── code
+│   │   │   │   ├── manager
+│   │   │   │   ├── stub.c
+│   │   │   │   ├── stub.cpp
+│   │   │   │   ├── stub.java
+│   │   │   │   ├── stub.pas
+│   │   │   │   └── stub.py
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── communication_many_stdio_stubbed
+│   │   │   ├── code
+│   │   │   │   ├── manager
+│   │   │   │   ├── stub.c
+│   │   │   │   ├── stub.cpp
+│   │   │   │   ├── stub.java
+│   │   │   │   ├── stub.pas
+│   │   │   │   └── stub.py
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── communication_stdio
+│   │   │   ├── code
+│   │   │   │   └── manager
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── communication_stdio_stubbed
+│   │   │   ├── code
+│   │   │   │   ├── manager
+│   │   │   │   ├── stub.c
+│   │   │   │   ├── stub.cpp
+│   │   │   │   ├── stub.java
+│   │   │   │   ├── stub.pas
+│   │   │   │   └── stub.py
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   ├── __init__.py
+│   │   ├── outputonly
+│   │   │   ├── data
+│   │   │   │   ├── input_000.txt
+│   │   │   │   ├── input_001.txt
+│   │   │   │   ├── output_000.txt
+│   │   │   │   └── output_001.txt
+│   │   │   └── __init__.py
+│   │   ├── outputonly_comparator
+│   │   │   ├── code
+│   │   │   │   └── checker
+│   │   │   ├── data
+│   │   │   │   ├── input_000.txt
+│   │   │   │   ├── input_001.txt
+│   │   │   │   ├── output_000.txt
+│   │   │   │   └── output_001.txt
+│   │   │   └── __init__.py
+│   │   ├── twosteps
+│   │   │   ├── code
+│   │   │   │   ├── first.h
+│   │   │   │   ├── manager.c
+│   │   │   │   ├── manager.h
+│   │   │   │   └── second.h
+│   │   │   ├── data
+│   │   │   │   ├── 1.in
+│   │   │   │   ├── 1.out
+│   │   │   │   ├── 2.in
+│   │   │   │   └── 2.out
+│   │   │   └── __init__.py
+│   │   └── twosteps_comparator
+│   │       ├── code
+│   │       │   ├── checker
+│   │       │   ├── first.h
+│   │       │   ├── manager.c
+│   │       │   ├── manager.h
+│   │       │   └── second.h
+│   │       ├── data
+│   │       │   ├── 1.in
+│   │       │   ├── 1.out
+│   │       │   ├── 2.in
+│   │       │   └── 2.out
+│   │       └── __init__.py
+│   ├── Test.py
+│   ├── testrunner.py
+│   ├── Tests.py
+│   ├── unit_tests
+│   │   ├── cmscommon
+│   │   │   ├── binary_test.py
+│   │   │   ├── commands_test.py
+│   │   │   ├── crypto_test.py
+│   │   │   ├── digest_test.py
+│   │   │   └── mimetypes_test.py
+│   │   ├── cmscontrib
+│   │   │   ├── AddAdminTest.py
+│   │   │   ├── AddParticipationTest.py
+│   │   │   ├── AddStatementTest.py
+│   │   │   ├── AddSubmissionTest.py
+│   │   │   ├── DumpExporterTest.py
+│   │   │   ├── DumpImporterTest.py
+│   │   │   ├── ImportContestTest.py
+│   │   │   ├── ImportDatasetTest.py
+│   │   │   ├── ImportTaskTest.py
+│   │   │   ├── ImportTeamTest.py
+│   │   │   └── ImportUserTest.py
+│   │   ├── databasemixin.py
+│   │   ├── db
+│   │   │   ├── filecacher_test.py
+│   │   │   └── session_test.py
+│   │   ├── filesystemmixin.py
+│   │   ├── grading
+│   │   │   ├── __init__.py
+│   │   │   ├── init_test.py
+│   │   │   ├── ParameterTypesTest.py
+│   │   │   ├── SandboxTest.py
+│   │   │   ├── scoretypes
+│   │   │   │   ├── GroupMinTest.py
+│   │   │   │   ├── GroupMulTest.py
+│   │   │   │   ├── GroupThresholdTest.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── scoretypetestutils.py
+│   │   │   │   └── SumTest.py
+│   │   │   ├── scoring_test.py
+│   │   │   ├── steps
+│   │   │   │   ├── compilation_test.py
+│   │   │   │   ├── fakeisolatesandbox.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── stats_test.py
+│   │   │   │   ├── trusted_test.py
+│   │   │   │   ├── utils_test.py
+│   │   │   │   └── whitediff_test.py
+│   │   │   └── tasktypes
+│   │   │       ├── BatchTest.py
+│   │   │       ├── CommunicationTest.py
+│   │   │       ├── __init__.py
+│   │   │       ├── OutputOnlyTest.py
+│   │   │       ├── tasktypetestutils.py
+│   │   │       └── util_test.py
+│   │   ├── __init__.py
+│   │   ├── io
+│   │   │   ├── priorityqueue_test.py
+│   │   │   ├── rpc_test.py
+│   │   │   └── triggeredservice_test.py
+│   │   ├── locale
+│   │   │   └── locale_test.py
+│   │   ├── server
+│   │   │   ├── contest
+│   │   │   │   ├── authentication_test.py
+│   │   │   │   ├── communication_test.py
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── phase_management_test.py
+│   │   │   │   ├── printing_test.py
+│   │   │   │   ├── submission
+│   │   │   │   │   ├── check_test.py
+│   │   │   │   │   ├── file_matching_test.py
+│   │   │   │   │   ├── file_retrieval_test.py
+│   │   │   │   │   ├── __init__.py
+│   │   │   │   │   ├── utils_test.py
+│   │   │   │   │   └── workflow_test.py
+│   │   │   │   └── tokening_test.py
+│   │   │   ├── file_middleware_test.py
+│   │   │   ├── __init__.py
+│   │   │   └── util_test.py
+│   │   ├── service
+│   │   │   ├── esoperations_test.py
+│   │   │   ├── flushingdict_test.py
+│   │   │   ├── LogServiceTest.py
+│   │   │   ├── ProxyServiceTest.py
+│   │   │   ├── ResourceServiceTest.py
+│   │   │   ├── scoringoperations_test.py
+│   │   │   ├── ScoringServiceTest.py
+│   │   │   └── WorkerTest.py
+│   │   ├── testidgenerator.py
+│   │   └── util_test.py
+│   └── web
+│       ├── AWSRequests.py
+│       ├── CWSRequests.py
+│       └── __init__.py
+├── codecov
+├── config
+│   ├── cms.conf.sample
+│   ├── cms.ranking.conf.sample
+│   └── nginx.conf.sample
+├── CreateByAaW
+│   ├── addUserToContestCsv.sh
+│   ├── cms_user.csv
+│   ├── createUserFromCsvInDocker.sh
+│   └── createUserFromCsv.sh
+├── debian
+│   └── copyright
+├── dev-requirements.txt
+├── dist
+│   └── cms-1.5.dev0-py3.8.egg
+├── docker-compose.empty.yml
+├── docker-compose.yml
+├── Dockerfile
+├── docs
+│   ├── Configuring a contest.rst
+│   ├── conf.py
+│   ├── Creating a contest.rst
+│   ├── Data model.rst
+│   ├── Detailed timing configuration.rst
+│   ├── External contest formats.rst
+│   ├── gh_links.py
+│   ├── index.rst
+│   ├── Installation.rst
+│   ├── Internals.rst
+│   ├── Introduction.rst
+│   ├── Localization.rst
+│   ├── Makefile
+│   ├── RankingWebServer.rst
+│   ├── requirements.txt
+│   ├── Running CMS.rst
+│   ├── Score types.rst
+│   ├── _static
+│   ├── Task types.rst
+│   ├── Task versioning.rst
+│   ├── _templates
+│   └── Troubleshooting.rst
+├── FixRankingBug.py
+├── isolate
+│   ├── cg.c
+│   ├── cg.o
+│   ├── config.c
+│   ├── config.o
+│   ├── default.cf
+│   ├── isolate
+│   ├── isolate.1.txt
+│   ├── isolate.c
+│   ├── isolate-check-environment
+│   ├── isolate.h
+│   ├── isolate.o
+│   ├── LICENSE
+│   ├── Makefile
+│   ├── README.md
+│   ├── rules.c
+│   ├── rules.o
+│   ├── TODO
+│   ├── util.c
+│   └── util.o
+├── MyScripts
+│   ├── Account_Generator.cpp
+│   ├── Add_Problem_Id_To_File_Name.cpp
+│   ├── Moss.py
+│   └── Sort_Submissions_By_Problem_ID.cpp
+├── Polygon
+│   ├── pack.sh
+│   └── README.md
+├── prerequisites.py
+├── README.md
+├── requirements.txt
+├── Sample_Contest
+│   ├── batch
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   ├── solution.pas
+│   │   │   ├── solution.php
+│   │   │   └── solution.py
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── batch_comparator
+│   │   ├── check
+│   │   │   ├── checker
+│   │   │   └── checker.cpp
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   ├── solution.pas
+│   │   │   ├── solution.php
+│   │   │   └── solution.py
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── batch_file
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   ├── solution.pas
+│   │   │   ├── solution.php
+│   │   │   └── solution.py
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── batchgrader
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── grader.c
+│   │   │   ├── grader.cpp
+│   │   │   ├── grader.java
+│   │   │   ├── grader.pas
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   └── solution.pas
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── batchwithoutgen
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   ├── solution.pas
+│   │   │   ├── solution.php
+│   │   │   └── solution.py
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── communication
+│   │   ├── check
+│   │   │   ├── manager
+│   │   │   └── manager.cpp
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   ├── solution.pas
+│   │   │   ├── stub.c
+│   │   │   ├── stub.cpp
+│   │   │   ├── stub.java
+│   │   │   └── stub.pas
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── communicationtwoways
+│   │   ├── check
+│   │   │   ├── manager
+│   │   │   └── manager.cpp
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── sol
+│   │   │   ├── communicationtwoways.h
+│   │   │   ├── solution.c
+│   │   │   ├── solution.cpp
+│   │   │   ├── solution.java
+│   │   │   ├── stub.c
+│   │   │   ├── stub.cpp
+│   │   │   └── stub.java
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── contest.yaml
+│   ├── outputonly
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   ├── outputonlycomparator
+│   │   ├── check
+│   │   │   ├── checker
+│   │   │   └── checker.cpp
+│   │   ├── gen
+│   │   │   └── GEN
+│   │   ├── input
+│   │   │   ├── input0.txt
+│   │   │   ├── input1.txt
+│   │   │   ├── input2.txt
+│   │   │   ├── input3.txt
+│   │   │   ├── input4.txt
+│   │   │   ├── input5.txt
+│   │   │   ├── input6.txt
+│   │   │   ├── input7.txt
+│   │   │   ├── input8.txt
+│   │   │   └── input9.txt
+│   │   ├── output
+│   │   │   ├── output0.txt
+│   │   │   ├── output1.txt
+│   │   │   ├── output2.txt
+│   │   │   ├── output3.txt
+│   │   │   ├── output4.txt
+│   │   │   ├── output5.txt
+│   │   │   ├── output6.txt
+│   │   │   ├── output7.txt
+│   │   │   ├── output8.txt
+│   │   │   └── output9.txt
+│   │   ├── statement
+│   │   │   ├── statement.pdf
+│   │   │   └── statement.tex
+│   │   └── task.yaml
+│   └── README.md
+├── scripts
+│   ├── cmsAdminWebServer
+│   ├── cmsChecker
+│   ├── cmsContestWebServer
+│   ├── cmsDropDB
+│   ├── cmsEvaluationService
+│   ├── cmsInitDB
+│   ├── cmsLogService
+│   ├── cmsPrintingService
+│   ├── cmsProxyService
+│   ├── cmsRankingWebServer
+│   ├── cmsResourceService
+│   ├── cmsScoringService
+│   └── cmsWorker
+├── setup.cfg
+├── setup.py
+└── tree.txt
+
+340 directories, 2077 files
