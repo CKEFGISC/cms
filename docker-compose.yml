@@ -20,6 +20,7 @@ services:
     volumes:
       - "./codecov:/home/cmsuser/cms/codecov"
       - "./CreateByAaW:/home/cmsuser/cms/CreateByAaW"
+      - /srv/cms:/var/local/lib/cms/ranking
     ports:
       - 8888:8888
       - 8889:8889
