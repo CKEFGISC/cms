@@ -1,56 +1,109 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define all(a) begin(a), end(a)
-#define pb push_back
-#define pii pair<int, int>
-#define F first
-#define S second
-#define mp make_pair
 
-const char chr[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+// ＊Important＊ Check if the same team name exist for different teams.
+
+#define AUTO_GENERATE_ACCOUNT
+#define AUTO_GENERATE_TEAMNAME
+
+#if defined(AUTO_GENERATE_ACCOUNT) && defined(AUTO_GENERATE_TEAMNAME)
+    #define ACCOUNT_NUMBER 10
+#endif
+
+#define AccountPrefix "account"
+#define TeamnamePrefix "team"
+
+#define PASSWORD_LENTH 6
+const char chr[] = {'2', '3', '4', '5', '6', '7', '8', '9',
                     'A', 'B', 'C', 'D', 'E', 'F', 'G',
-                    'H', 'I', 'J', 'K', 'L', 'M', 'N',
-                    'O', 'P', 'Q', 'R', 'S', 'T',
+                    'H', 'J', 'K', 'L', 'M', 'N',
+                    'P', 'Q', 'R', 'S', 'T',
                     'U', 'V', 'W', 'X', 'Y', 'Z',
                     'a', 'b', 'c', 'd', 'e', 'f', 'g',
-                    'h', 'i', 'j', 'k', 'l', 'm', 'n',
-                    'o', 'p', 'q', 'r', 's', 't',
+                    'h', 'i', 'j', 'k', 'm', 'n',
+                    'p', 'q', 'r', 's', 't',
                     'u', 'v', 'w', 'x', 'y', 'z'};
 
-string genPass() {
+string Generate_Password() {
     string password;
-    for (int i = 0; i < 6; i++) {
-        int idx = rand() % 62;
-        password.pb(chr[idx]);
+    int sz = sizeof(chr);
+    for (int i = 0; i < PASSWORD_LENTH; i++) {
+        int idx = rand() % sz;
+        password += chr[idx];
     }
     return password;
 }
 
+string Generate_Account(int idx) {
+    stringstream account;
+    account << AccountPrefix << setw(3) << setfill('0') << idx;
+    return account.str();
+}
+
+string Generate_Teamname(int idx) {
+    stringstream teamname;
+    teamname << TeamnamePrefix << setw(3) << setfill('0') << idx;
+    return teamname.str();
+}
+
 int main() {
-    srand(time(NULL));
-    /*
-    users:
-      - username: "team1"
-        password: "dssinsdnds"
-        first_name: "TeamName"
-    */
-    ifstream TeamnameFile("teamname.txt");
+    srand(time(0));
+    map<string, pair<string, string> > team;
     ofstream PasswordFile("password.txt");
-    ofstream SettingFile("context.yaml");
+    ofstream SettingFile("contest.user.yaml");
+#ifdef AUTO_GENERATE_ACCOUNT
+        ofstream AccountFile("account.txt");
+#else
+        ifstream AccountFile("account.txt");
+#endif
+#ifdef AUTO_GENERATE_TEAMNAME
+        ofstream TeamnameFile("teamname.txt");
+#else
+        ifstream TeamnameFile("teamname.txt");
+#endif
 
-    for (int i = 1; i <= 200; i++) {
-        string password = genPass();
-        string teamname;
-        getline(TeamnameFile,teamname);
+    string teamname, account, password;
+    int Account_Idx = 1;
 
-        PasswordFile << password << '\n';
-        SettingFile << "  - username: \"team" << setw(3) << setfill('0') << i << "\"\n";
+#if defined(AUTO_GENERATE_TEAMNAME) && defined(AUTO_GENERATE_ACCOUNT)
+    while(Account_Idx <= ACCOUNT_NUMBER){
+        teamname = Generate_Teamname(Account_Idx);
+        account = Generate_Account(Account_Idx);
+#elif !defined(AUTO_GENERATE_ACCOUNT) && !defined(AUTO_GENERATE_TEAMNAME)
+    while (getline(AccountFile, account)) {
+           getline(TeamnameFile, teamname);
+#elif defined(AUTO_GENERATE_ACCOUNT) && !defined(AUTO_GENERATE_TEAMNAME)
+    while (getline(TeamnameFile, teamname)) {
+           account = Generate_Account(Account_Idx);
+#elif !defined(AUTO_GENERATE_ACCOUNT) && defined(AUTO_GENERATE_TEAMNAME)
+    while (getline(AccountFile, account)) {
+           teamname = Generate_Teamname(Account_Idx);
+#endif
+
+        password = Generate_Password();
+        
+        SettingFile << "  - username: \"" << account << "\"\n";
         SettingFile << "    password: \"" << password << "\"\n";
         SettingFile << "    first_name: \"" << teamname << "\"\n";
+
+#ifdef AUTO_GENERATE_ACCOUNT
+        AccountFile << account << "\n";
+#endif
+#ifdef AUTO_GENERATE_TEAMNAME
+        TeamnameFile << teamname << "\n";
+#endif
+        PasswordFile << password << "\n";
+
+        Account_Idx++;
     }
     TeamnameFile.close();
     PasswordFile.close();
+    AccountFile.close();
     SettingFile.close();
 }
 
-// g++ gen.cpp && ./a.out && rm a.out
+/*
+    cms username:    account
+    cms password:    password
+    cms first_name:  teamname
+*/
