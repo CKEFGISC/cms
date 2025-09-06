@@ -1,17 +1,48 @@
-# Package test case from polygon package to cms format
+# Convert Polygon Package To CMS Format
 
-1. 把這份repo載下來，並進到Polygon資料夾。或是直接建立一個資料夾並把pack.sh放進去
-2. 到Polygon的Packages點擊Full並下載Linux版。
+1. Go to Polygon's Packages, click Full and Download Linux version.
 <img width="1112" alt="image" src="https://user-images.githubusercontent.com/101823195/232975754-166b7831-db3c-4fbd-9975-38cb05f49e2c.png">
 
-3. 解壓縮所有檔案到此資料夾(可順便更改檔名)
-<img width="518" alt="image" src="https://user-images.githubusercontent.com/101823195/232982551-f85edceb-590e-413f-85c8-be15a4eef207.png">
+2. Extract the archive to a new folder (Remember to change file name, you can add multiple problems in that folder)
 
-4. 執行以下指令後會生成一個`cmsTestCase`資料夾，為每一題測資的zip檔。
+Next, there will be two conversion methods, which are `Full Contest Conversion` and `TestCase Only Conversion`.
+## Full Contest Conversion
+1. Copy pack_to_yaml.sh to your folder or use the following command
 ```
-sudo chmod a+x pack.sh && ./pack.sh
+curl https://raw.githubusercontent.com/erichung9060/cms/main/Polygon/pack_to_yaml.sh -o pack_to_yaml.sh
+```
+<img width="564" alt="image" src="https://github.com/erichung1113/cms/assets/101823195/87570ab6-e875-497c-acaa-ecbcb9c1f6fe">
+
+3. Run the following command, then a folder named Contest will be generated, which is a CMS contest package with problems you added.
+```
+chmod u+x pack_to_yaml.sh && ./pack_to_yaml.sh
+```
+<img width="565" alt="image" src="https://github.com/erichung1113/cms/assets/101823195/7d1abe87-d0aa-4e28-8dfa-7e382b96756d">
+
+3. Go into the Contest folder and run the command to import contest to CMS.
+```
+chmod u+x import.sh && ./import.sh
+```
+4. After importing the contest, you still need to change some settings:\
+    a. score mode \
+    b. allowed language \
+    c. contest's start time and end time
+
+## TestCase Only Conversion
+1. Copy pack_to_testcase.sh to that folder
+```
+curl https://raw.githubusercontent.com/erichung9060/cms/main/Polygon/pack_to_testcase.sh -o pack_to_testcase.sh
+```
+<img width="565" alt="image" src="https://github.com/erichung1113/cms/assets/101823195/1699839a-45de-40e5-9601-8dd4569698c7">
+
+2. Run the following command, then a folder named cmsTestCase will be generated, which contains zip files for each problem.
+```
+chmod u+x pack_to_testcase.sh && ./pack_to_testcase.sh
 ```
 <img width="517" alt="image" src="https://user-images.githubusercontent.com/101823195/232981339-1042964f-0612-475c-9798-0d411ea68d14.png">
 
-5.到CMS Task中下方Test Case的地方點擊` Add multiple testcases`並選擇該題的zip檔上傳
+3. Go to `Test Case` at the bottom of Task on CMS, and click `Add multiple testcases` then select the zip file of the problem to upload.
+<img width="524" alt="Screenshot 2023-08-02 at 5 00 27 AM" src="https://github.com/erichung1113/cms/assets/101823195/b071d1df-5405-4db9-a87e-527f11b3e4c6">
 <img width="965" alt="image" src="https://user-images.githubusercontent.com/101823195/232983399-95e84d0e-5eaf-490d-8f2f-770c17d560c5.png">
+
+4. Congratulations!🥳
